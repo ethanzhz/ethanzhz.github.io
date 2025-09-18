@@ -1,21 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网站</title>
-    <style>
-        body {
-            background:url("pic/bg2.webp");
-            margin: 0;
-            min-height: 100vh;
-            background-size:cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个人主页</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(5px);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #2c3e50;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      background: #ff6f61;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #ff3b2e;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    section h2 {
+      color: #3498db;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.2);
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-   
+
+  <header>
+    <h1>Hi, 我是小X 🎧</h1>
+    <p>一个热爱学习和探索的青少年</p>
+  </header>
+
+  <nav>
+    <a href="#about">关于我</a>
+    <a href="#hobby">兴趣爱好</a>
+    <a href="#dream">我的梦想</a>
+  </nav>
+
+  <section id="about">
+    <h2>关于我 👦</h2>
+    <div class="card">
+      <p>我是一名中学生，喜欢科技、运动和音乐。平时爱捣鼓电脑和代码，也喜欢和朋友打篮球。</p>
+    </div>
+  </section>
+
+  <section id="hobby">
+    <h2>兴趣爱好 🎮</h2>
+    <div class="card">
+      <ul>
+        <li>打篮球 🏀</li>
+        <li>玩游戏 🎮</li>
+        <li>写点小程序 💻</li>
+        <li>听音乐 🎶</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="dream">
+    <h2>我的梦想 🚀</h2>
+    <div class="card">
+      <p>未来我想成为一名程序员或游戏设计师，做出让人喜欢的软件或游戏。</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>💡 这是我的小小个人主页，欢迎来访！</p>
+  </footer>
+
 </body>
 </html>
