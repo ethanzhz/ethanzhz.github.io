@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input class="wbk" type="text" value="用户名">
+    <input class="mm" type="text" value="用户名">
+    <input class="cb" type="checkbox">
+    <button>点我</button>
+
+    <script>
+        const uname = document.querySelector('.wbk')
+        uname.value = "zhangyi" // value 获取和改变文本框的值
+
+        const ps = document.querySelector('.mm')
+        ps.type = 'password' // 输入不可见
+
+        const cb = document.querySelector('.cb')
+        cb.checked = true // true为勾选，注意除了几个特殊值，其他均为勾选
+
+        const bt = document.querySelector('button')
+        bt.disabled = true // true为不可点击，手机验证码会用到
+
+        // 下拉 selected 为降到
+    </script>
+
+</body>
+
+</html>

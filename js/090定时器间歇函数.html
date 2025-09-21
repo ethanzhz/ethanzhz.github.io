@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // setInterval(函数名, 间隔时间ms)，第一次执行是 间隔时间ms 之后
+        let n = setInterval(function () { console.log("hi!") }, 1000)
+        // 可以直接写匿名函数，也可以是函数名，注意函数名后不要加()调用
+        // 返回值是一个定时器id，因为需要重复开关定时器，所以用 let 定义
+        function fn() {
+            console.log('hello!');
+
+        }
+        let m = setInterval(fn, 3000)
+        // clearInterval(n) // 关闭定时器
+        clearInterval(n)
+        clearInterval(m)
+    </script>
+</body>
+
+</html>

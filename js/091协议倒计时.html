@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            width: 500px;
+            height: 400px;
+            text-indent: 2em;
+            font-size: 18px;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea>
+    用户注册协议是互联网平台为规范用户行为、维护运营秩序制定的法律文件，通常由运营商单方拟定并保留修改权。用户需同意全部条款方可注册使用服务，内容涵盖账号管理、隐私保护、版权归属及责任限制等核心条款，具有法律约束效力。
+    早期协议主要明确用户需遵守法律法规并禁止违法行为，随着互联网服务多样化，条款逐步细化禁止传播违法信息、网络攻击、侵犯知识产权等具体行为，并建立账号身份认证机制。现代协议普遍赋予平台单方修改协议、终止服务、删除违规内容等权限，同时通过免责声明和技术安全条款降低运营风险。部分协议引入争议解决前置条款，强化平台解释权和技术数据作为争议判定依据。当前协议范本已形成“预防-处置-追责”的闭环约束体系，通过用户义务清单、平台管理权限及法律适用条款系统性遏制违法干扰行为。
+    </textarea>
+    <br>
+    <button class="bt" disabled>已阅读协议(6)</button>
+    <script>
+        const bt = document.querySelector('.bt')
+        let i = 6
+
+        let n = setInterval(function () {
+            i--;
+            bt.innerHTML = `已阅读协议(${i})`;
+            if (i === 0) {
+                bt.innerHTML = `同意`
+                clearInterval(n)
+                bt.disabled = false
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>
