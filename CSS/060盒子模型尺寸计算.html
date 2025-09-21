@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding: 20px;
+            /*內减模式*/
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>盒子模型 - 尺寸计算</h1>
+    <ul>
+        <li>默认情况<p>盒子尺寸=内容尺寸+border尺寸+内边距尺寸</p>
+        </li>
+        <li>结论：给盒子加border/padding都辉撑大盒子</li>
+        <li>解决
+            <p>手动做减法，减掉border/padding的尺寸</p>
+            <p>內减模式：box-sizing:border-box</p>
+        </li>
+    </ul>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ex1 li:first-child {
+            background-color: green;
+        }
+
+        li:last-child {
+            background-color: red;
+        }
+
+        li:nth-child(4) {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>结构伪类选择器</h1>
+    <p>作用：根据元素的结构关系查找元素。</p>
+    <table>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+        <tr>
+            <td>E:first-child</td>
+            <td>查找第一个E元素</td>
+        </tr>
+        <tr>
+            <td>E:last-child</td>
+            <td>查找最后一个E元素</td>
+        </tr>
+        <tr>
+            <td>E:ntd-child(N)</td>
+            <td>查找第N个E元素（第一个元素N值为1）</td>
+        </tr>
+    </table>
+    <ul class="ex1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <h2>:nth-child(公司)</h2>
+    <p>作用：根据元素的结构关系查找多个元素。</p>
+    <ul>
+        <li>偶数标签：2n</li>
+        <li>奇数标签：2n+1；2n-1</li>
+        <li>找到5的倍数的标签：5n</li>
+        <li>找到第5个以后得标签：n+5</li>
+        <li>找到第5个以前的标签：-n+5</li>
+    </ul>
+</body>
+
+</html>
