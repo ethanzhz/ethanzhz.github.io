@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖</title>
+    <style>
+        span {
+            display: inline-block;
+            font-size: 20px;
+            width: 100px;
+        }
+        button {
+            width: 100px;
+            height: 100px;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>随机抽奖</h1>
+        <span>中奖的是：</span>
+        <span class="name">???</span>
+        <button class="begin">开始</button>
+        <button class="finish" disabled>结束</button>
+    </div>
+    <ul></ul>
+    <script>
+        const arr = ['黄金岭','黄经伟','苗广栋','夏艮华','王殿飞','游志勇','王辉','石飞','代加虎']
+        const start = document.querySelector('.begin')
+        const end = document.querySelector('.finish')
+        const qs = document.querySelector('.name')
+        const list = document.querySelector('ul')
+        
+        let timerId = 0
+        let random = 0
+
+        start.addEventListener('click', function(){
+            end.disabled = false
+            start.disabled = true
+            timerId = setInterval(function(){
+                random = parseInt(Math.random() * arr.length)
+                qs.innerHTML = arr[random]
+            }, 30)
+
+            if (arr.length === 1){
+                start.disabled = end.disabled = true
+                name = list[0]
+                list.insertAdjacentHTML('afterbegin',`<li>${name}</li>`)
+            } 
+        })
+        end.addEventListener('click', function(){
+            end.disabled = true
+            start.disabled = false
+            clearInterval(timerId)
+            const name = arr.splice(random, 1)
+            list.insertAdjacentHTML('afterbegin',`<li>${name}</li>`)
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .radius {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border-radius: 20px 50px 80px 100px;
+            box-shadow: 100px 100px 50px 40px gray ;
+        }
+    </style>
+</head>
+<body>
+    <div class="radius"></div>
+     <table>
+        <tr>
+            <th>取值个数</th>
+            <th>示例</th>
+            <th>含义</th>
+        </tr>
+        <tr>
+            <td>一个值</td>
+            <td>border-radius : 10px;</td>
+            <td>四个角都是10px</td>
+        </tr>
+        <tr>
+            <td>两个值</td>
+            <td>border-radius : 10px 20px;</td>
+            <td>左上、右下对角10px，右上、左下对角20px</td>
+        </tr>
+        <tr>
+            <td>三个值</td>
+            <td>border-radius : 10px 20px 30px;</td>
+            <td>左上10px，右上、左下对角20px，右下30px</td>
+        </tr>
+        <tr>
+            <td>四个值</td>
+            <td>border-radius : 10px 20px 30px 40px;</td>
+            <td>左上10px，右上20px，右下30px，左下40px</td>
+        </tr>
+    </table>
+</body>
+</html>

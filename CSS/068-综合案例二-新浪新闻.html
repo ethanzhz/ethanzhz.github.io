@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .new {
+            margin: 100px auto;
+            width: 360px;
+            height: 100px;
+        }
+
+        .new .hd {
+            height: 34px;
+            background-color: #eee;
+            border: 1px solid #dbdee1;
+            border-left: none;
+        }
+
+        .new .hd a {
+            /*-1px 盒子向上移动*/
+            margin-top: -1px;
+            display: block;
+            width: 48px;
+            height: 34px;
+            background-color: #fff;
+            border-top: 3px solid #ff8400;
+            border-right: 1px solid #dbdee1;
+            text-align: center;
+            line-height: 32px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .new .bd {
+            padding: 5px;
+        }
+
+        .new .bd li {
+            padding-left: 15px;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-position: 0 center;
+        }
+
+        .new .bd li a {
+            padding-left: 20px;
+            background: url() no-repeat 0 center;
+            font-size: 12px;
+            color: #666;
+            line-height: 24px;
+        }
+
+        .new .bd li a:hover {
+            color: #ff8400;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="new">
+        <div class="hd">
+            <a href="">新闻</a>
+        </div>
+        <div class="bd">
+            <ul>
+                <li><a href="">点赞</a></li>
+                <li><a href="">在希望的田野上</a></li>
+                <li><a href="">"中国天眼"</a></li>
+                <li><a href="">急！这个领域</a></li>
+                <li><a href="">G9"带货"背后</a></li>
+                <li><a href="">多地力推二手房</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
