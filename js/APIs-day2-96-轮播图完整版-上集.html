@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 560px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slider-wrapper {
+            width: 100%;
+            height: 320px;
+        }
+
+        .slider-wrapper img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .slider-footer {
+            height: 80px;
+            background-color: red;
+            position: relative;
+        }
+
+        .slider-footer .toggle {
+            position: absolute;
+            right: 0;
+            top: 12px;
+            display: flex;
+        }
+
+        .slider-footer .toggle button {
+            margin-right: 12px;
+            width: 28px;
+            height: 28px;
+            appearance: none;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .slider-footer .toggle button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .slider-footer p {
+            margin: 0;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .slider-indicator {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .slider-indicator li {
+            width: 8px;
+            height: 8px;
+            margin: 4px;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 0.4;
+            cursor: pointer;
+        }
+
+        .slider-indicator li.active {
+            width: 12px;
+            height: 12px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-wrapper">
+            <img src="pic/1.avif" alt="" />
+        </div>
+        <div class="slider-footer">
+            <p>枕刀歌</p>
+            <ul class="slider-indicator">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="toggle">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sliderData = [{ url: "pic/1.avif", title: "枕刀歌", color: "red" },
+        { url: "pic/2.avif", title: "消逝的光芒：困兽", color: "blue" },
+        { url: "pic/3.avif", title: "已失控", color: "pink" },
+        { url: "pic/4.avif", title: "千杯音乐节", color: "black" },
+        { url: "pic/5.avif", title: "曾经的瞄准恶魔", color: "yellow" },
+        { url: "pic/6.avif", title: "浪尖鱼获大赏", color: "green" }
+        ]
+
+        const pic = document.querySelector('img')
+        const title =document.querySelector('.slider-footer p')
+        const color = document.querySelector('.slider-footer')
+
+        let i = 0
+        /*let n = setInterval(function(){
+            i++
+            if (i >= sliderData.length){
+                i = 0
+            }
+            pic.src = sliderData[i].url
+            title.innerHTML = sliderData[i].title
+            color.style.backgroundColor = sliderData[i].color
+            document.querySelector('.slider-indicator .active').classList.remove('active')
+            document.querySelector(`.slider-indicator li:nth-child(${i+1})`).classList.add('active')
+        }, 2000)*/
+
+        const forword = document.querySelector('.next')
+        const back = document.querySelector('.prev')
+        forword.addEventListener('click', function(){
+            i++
+            i = i >= sliderData.length ? 0 : i
+            console.log(sliderData[i])
+                
+        })
+        back.addEventListener('click', function(){
+            i = i <= 0 ? 6 : i
+            i--
+            
+            console.log(sliderData[i])
+        })
+    </script>
+</body>
+</html>
