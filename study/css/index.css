@@ -1,1 +1,27 @@
 /* 首页CSS样式 */
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.body {
+    background-color: #f3f4f5;
+}
+
+.header {
+    height: 100px;
+    background-color: #fff;
+}
+
+.header .wrapper {
+    display: flex;
+    padding-top: 29;
+}
+
+.logo a {
+    display: block;
+    width: 195px;
+    height: 41px;
+    background-image: url(../images/logo.png);
+    font-size: 0;
+}
