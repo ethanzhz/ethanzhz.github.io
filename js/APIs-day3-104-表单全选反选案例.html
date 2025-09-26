@@ -38,6 +38,11 @@
         .allCheck {
             width: 80px;
         }
+        /* 伪类选择器，选择被勾选的复选框 */
+        .ck:checked {
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
@@ -74,8 +79,26 @@
             <td>小米</td>
             <td>￥5999</td>
         </tr>
-        <tr></tr>
-        <tr></tr>
     </table>
+
+    <script>
+        // 1. 获取大复选框
+        const checkall = document.querySelector('#checkAll')
+        // 2. 获取所有的小复选框
+        const cks = document.querySelectorAll('.ck')
+        // 3. 点击大复选框 注册事件
+        checkall.addEventListener('click', function(){
+                for(let i=0; i<cks.length; i++){
+                    cks[i].checked = this.checked
+                }
+        })
+        for(let i=1;i<cks.length;i++){
+            cks[i].addEventListener('click', function(){
+            checkall.checked = document.querySelectorAll('.ck:checked').length === cks.length
+            })
+        }
+    </script>
+
+
 </body>
 </html>
