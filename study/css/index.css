@@ -15,7 +15,7 @@
 
 .header .wrapper {
     display: flex;
-    padding-top: 29;
+    padding-top: 29px;
 }
 
 .logo a {
@@ -24,4 +24,77 @@
     height: 41px;
     background-image: url(../images/logo.png);
     font-size: 0;
+}
+
+.nav {
+    margin-left: 102px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav li {
+    margin-right: 24px;
+}
+
+.nav li a {
+    display: block;
+    padding: 6px 8px;
+    line-height: 27px;
+    font-size: 19px;
+}
+
+.nav li .active,
+.nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+.search {
+    display: flex;
+    margin-left: 64px;
+    padding-left: 19px;
+    padding-right: 12px;
+    width: 412px;
+    height: 40px;
+    background-color: #f3f5f7;
+    border-radius: 20px;
+}
+
+.search input {
+    flex: 1;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+}
+
+.search input::placeholder {
+    font-size: 14px;
+    color: #999;
+}
+
+/* 父级是flex布局，子级变弹性盒子：加高宽生效  */
+.search a {
+    align-self: center;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/btn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.user {
+    margin-left: 32px;
+    margin-top: 4px;
+}
+
+.user img {
+    /* vertical-align调整行内行内块垂直方向对齐方式 */
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.user span {
+    font-size: 16px;
+    color: #666;
 }
